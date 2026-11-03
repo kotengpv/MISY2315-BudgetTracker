@@ -16,5 +16,7 @@ namespace BudgetTracker
         {
             InitializeComponent();
         }
+
+        // KAMDEN WRITES HIS CODE HERE
     }
 }
