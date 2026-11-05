@@ -1,123 +1,69 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 class MonthlyBudget
 {
 private:
-    double food;
-    double rent;
-    double gas;
-    double entertainment;
-    double other;
+    int month;
+    int year;
+    string category;
+    double spendingLimit;
 
 public:
 
-    // Set starting budget amounts to zero
+    // Set starting values
     MonthlyBudget()
     {
-        food = 0;
-        rent = 0;
-        gas = 0;
-        entertainment = 0;
-        other = 0;
+        month = 1;
+        year = 2026;
+        category = "Food";
+        spendingLimit = 0;
     }
 
-    // Let the user enter their monthly budgets
-    void setBudgets()
+    // Let the user enter budget information
+    void setBudget()
     {
-        cout << "\n--- Set Monthly Budgets ---\n";
+        cout << "\n--- Set Monthly Budget ---\n";
 
-        cout << "Food budget: $";
-        cin >> food;
+        cout << "Enter month (1-12): ";
+        cin >> month;
 
-        cout << "Rent budget: $";
-        cin >> rent;
+        cout << "Enter year: ";
+        cin >> year;
 
-        cout << "Gas budget: $";
-        cin >> gas;
+        cout << "Enter expense category (Food, Rent, Gas, Entertainment, Other): ";
+        cin >> category;
 
-        cout << "Entertainment budget: $";
-        cin >> entertainment;
+        cout << "Enter spending limit: $";
+        cin >> spendingLimit;
 
-        cout << "Other expenses budget: $";
-        cin >> other;
-
-        cout << "\nBudgets saved successfully!\n";
+        cout << "\nBudget saved successfully!\n";
     }
 
-    // Display all budget amounts
-    void displayBudgets()
+    // Display budget information
+    void displayBudget()
     {
-        cout << "\n--- Monthly Budget ---\n";
+        cout << "\n--- Monthly Budget Information ---\n";
 
-        cout << "Food: $" << food << endl;
-        cout << "Rent: $" << rent << endl;
-        cout << "Gas: $" << gas << endl;
-        cout << "Entertainment: $" << entertainment << endl;
-        cout << "Other: $" << other << endl;
-
-        cout << "Total Budget: $" << calculateTotalBudget() << endl;
+        cout << "Month: " << month << endl;
+        cout << "Year: " << year << endl;
+        cout << "Category: " << category << endl;
+        cout << "Spending Limit: $" << spendingLimit << endl;
     }
 
-    // Add all budget amounts together
-    double calculateTotalBudget()
+    // Update the spending limit
+    void updateSpendingLimit()
     {
-        return food + rent + gas + entertainment + other;
+        cout << "\nEnter new spending limit: $";
+        cin >> spendingLimit;
+
+        cout << "Spending limit updated successfully!\n";
     }
 
-    // Allow the user to change a budget
-    void updateBudget()
+    // Calculate the remaining budget
+    double calculateRemainingBudget(double amountSpent)
     {
-        int choice;
-        double newAmount;
-
-        cout << "\n--- Update Budget ---\n";
-        cout << "1. Food\n";
-        cout << "2. Rent\n";
-        cout << "3. Gas\n";
-        cout << "4. Entertainment\n";
-        cout << "5. Other\n";
-
-        cout << "Choose a category to update: ";
-        cin >> choice;
-
-        cout << "Enter the new budget amount: $";
-        cin >> newAmount;
-
-        if (newAmount < 0)
-        {
-            cout << "Please enter a positive amount.\n";
-        }
-        else
-        {
-            switch (choice)
-            {
-                case 1:
-                    food = newAmount;
-                    break;
-
-                case 2:
-                    rent = newAmount;
-                    break;
-
-                case 3:
-                    gas = newAmount;
-                    break;
-
-                case 4:
-                    entertainment = newAmount;
-                    break;
-
-                case 5:
-                    other = newAmount;
-                    break;
-
-                default:
-                    cout << "Invalid choice.\n";
-                    return;
-            }
-
-            cout << "Budget updated successfully!\n";
-        }
+        return spendingLimit - amountSpent;
     }
 };
