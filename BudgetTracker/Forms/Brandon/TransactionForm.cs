@@ -3,7 +3,7 @@
  * Program: Budget Tracker
  * Course Number: MISY 2315
  * Semester: Fall 2026
- * Date Created: November 4, 2026
+ * Date Created: November 4, 2025
  */
 
 using System;
