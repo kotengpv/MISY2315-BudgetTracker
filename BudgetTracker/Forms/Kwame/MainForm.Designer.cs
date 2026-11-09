@@ -37,14 +37,17 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pnlHeader.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAddTransaction
             // 
             this.btnAddTransaction.AutoSize = true;
-            this.btnAddTransaction.Location = new System.Drawing.Point(564, 377);
+            this.btnAddTransaction.Location = new System.Drawing.Point(281, 215);
+            this.btnAddTransaction.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddTransaction.Name = "btnAddTransaction";
-            this.btnAddTransaction.Size = new System.Drawing.Size(116, 26);
+            this.btnAddTransaction.Size = new System.Drawing.Size(95, 23);
             this.btnAddTransaction.TabIndex = 0;
             this.btnAddTransaction.Text = "Add Transaction";
             this.btnAddTransaction.UseVisualStyleBackColor = true;
@@ -53,9 +56,10 @@
             // btnBudgetSettings
             // 
             this.btnBudgetSettings.AutoSize = true;
-            this.btnBudgetSettings.Location = new System.Drawing.Point(564, 432);
+            this.btnBudgetSettings.Location = new System.Drawing.Point(281, 260);
+            this.btnBudgetSettings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBudgetSettings.Name = "btnBudgetSettings";
-            this.btnBudgetSettings.Size = new System.Drawing.Size(115, 26);
+            this.btnBudgetSettings.Size = new System.Drawing.Size(92, 23);
             this.btnBudgetSettings.TabIndex = 1;
             this.btnBudgetSettings.Text = "Budget Settings";
             this.btnBudgetSettings.UseVisualStyleBackColor = true;
@@ -64,9 +68,10 @@
             // btnDashboard
             // 
             this.btnDashboard.AutoSize = true;
-            this.btnDashboard.Location = new System.Drawing.Point(564, 489);
+            this.btnDashboard.Location = new System.Drawing.Point(281, 306);
+            this.btnDashboard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(117, 26);
+            this.btnDashboard.Size = new System.Drawing.Size(95, 23);
             this.btnDashboard.TabIndex = 2;
             this.btnDashboard.Text = "View Dashboard";
             this.btnDashboard.UseVisualStyleBackColor = true;
@@ -76,9 +81,10 @@
             // 
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.Location = new System.Drawing.Point(434, 250);
+            this.lblWelcome.Location = new System.Drawing.Point(184, 112);
+            this.lblWelcome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(407, 41);
+            this.lblWelcome.Size = new System.Drawing.Size(329, 32);
             this.lblWelcome.TabIndex = 3;
             this.lblWelcome.Text = "Welcome to Budget Tracker";
             // 
@@ -87,52 +93,70 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(437, 309);
+            this.label1.Location = new System.Drawing.Point(186, 160);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(420, 23);
+            this.label1.Size = new System.Drawing.Size(337, 19);
             this.label1.TabIndex = 4;
             this.label1.Text = "Manage your income, expenses, and monthly budget.\r\n";
             // 
             // pnlHeader
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(27)))), ((int)(((byte)(43)))));
+            this.pnlHeader.Controls.Add(this.label3);
+            this.pnlHeader.Controls.Add(this.label2);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(882, 100);
+            this.pnlHeader.Size = new System.Drawing.Size(662, 81);
             this.pnlHeader.TabIndex = 5;
             // 
             // panel2
             // 
-            this.panel2.Location = new System.Drawing.Point(613, 62);
+            this.panel2.Location = new System.Drawing.Point(11, 85);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 100);
+            this.panel2.Size = new System.Drawing.Size(150, 81);
             this.panel2.TabIndex = 6;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(193, 305);
+            this.panel3.Location = new System.Drawing.Point(11, 189);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 100);
+            this.panel3.Size = new System.Drawing.Size(150, 81);
             this.panel3.TabIndex = 7;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(75, 146);
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label2.Location = new System.Drawing.Point(29, 33);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 16);
+            this.label2.Size = new System.Drawing.Size(81, 13);
             this.label2.TabIndex = 0;
-            this.label2.Text = "lblAppName";
+            this.label2.Text = "Budget Tracker";
             this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label3.Location = new System.Drawing.Point(561, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(89, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Personal Finance";
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(882, 553);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(662, 449);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnlHeader);
@@ -142,10 +166,13 @@
             this.Controls.Add(this.btnBudgetSettings);
             this.Controls.Add(this.btnAddTransaction);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Monthly Budget Tracker";
+            this.pnlHeader.ResumeLayout(false);
+            this.pnlHeader.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,5 +189,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
