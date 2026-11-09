@@ -1,19 +1,16 @@
-#include <iostream>
-#include <string>
-using namespace std;
+
+using System;
 
 class MonthlyBudget
 {
-private:
-    int month;
-    int year;
-    string category;
-    double spendingLimit;
-
-public:
+    // Variables to store budget information
+    private int month;
+    private int year;
+    private string category;
+    private double spendingLimit;
 
     // Set starting values
-    MonthlyBudget()
+    public MonthlyBudget()
     {
         month = 1;
         year = 2026;
@@ -22,48 +19,48 @@ public:
     }
 
     // Let the user enter budget information
-    void setBudget()
+    public void SetBudget()
     {
-        cout << "\n--- Set Monthly Budget ---\n";
+        Console.WriteLine("\n--- Set Monthly Budget ---");
 
-        cout << "Enter month (1-12): ";
-        cin >> month;
+        Console.Write("Enter month (1-12): ");
+        month = Convert.ToInt32(Console.ReadLine());
 
-        cout << "Enter year: ";
-        cin >> year;
+        Console.Write("Enter year: ");
+        year = Convert.ToInt32(Console.ReadLine());
 
-        cout << "Enter expense category (Food, Rent, Gas, Entertainment, Other): ";
-        cin >> category;
+        Console.Write("Enter expense category (Food, Rent, Gas, Entertainment, Other): ");
+        category = Console.ReadLine();
 
-        cout << "Enter spending limit: $";
-        cin >> spendingLimit;
+        Console.Write("Enter spending limit: $");
+        spendingLimit = Convert.ToDouble(Console.ReadLine());
 
-        cout << "\nBudget saved successfully!\n";
+        Console.WriteLine("\nBudget saved successfully!");
     }
 
     // Display budget information
-    void displayBudget()
+    public void DisplayBudget()
     {
-        cout << "\n--- Monthly Budget Information ---\n";
+        Console.WriteLine("\n--- Monthly Budget Information ---");
 
-        cout << "Month: " << month << endl;
-        cout << "Year: " << year << endl;
-        cout << "Category: " << category << endl;
-        cout << "Spending Limit: $" << spendingLimit << endl;
+        Console.WriteLine("Month: " + month);
+        Console.WriteLine("Year: " + year);
+        Console.WriteLine("Category: " + category);
+        Console.WriteLine("Spending Limit: $" + spendingLimit);
     }
 
     // Update the spending limit
-    void updateSpendingLimit()
+    public void UpdateSpendingLimit()
     {
-        cout << "\nEnter new spending limit: $";
-        cin >> spendingLimit;
+        Console.Write("\nEnter new spending limit: $");
+        spendingLimit = Convert.ToDouble(Console.ReadLine());
 
-        cout << "Spending limit updated successfully!\n";
+        Console.WriteLine("Spending limit updated successfully!");
     }
 
     // Calculate the remaining budget
-    double calculateRemainingBudget(double amountSpent)
+    public double CalculateRemainingBudget(double amountSpent)
     {
         return spendingLimit - amountSpent;
     }
-};
+}
