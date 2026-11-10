@@ -34,20 +34,28 @@
             this.lblWelcome = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.pnlHeader.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAddTransaction
             // 
             this.btnAddTransaction.AutoSize = true;
-            this.btnAddTransaction.Location = new System.Drawing.Point(281, 215);
-            this.btnAddTransaction.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddTransaction.Location = new System.Drawing.Point(21, 56);
+            this.btnAddTransaction.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddTransaction.Name = "btnAddTransaction";
-            this.btnAddTransaction.Size = new System.Drawing.Size(95, 23);
+            this.btnAddTransaction.Size = new System.Drawing.Size(287, 23);
             this.btnAddTransaction.TabIndex = 0;
             this.btnAddTransaction.Text = "Add Transaction";
             this.btnAddTransaction.UseVisualStyleBackColor = true;
@@ -56,10 +64,10 @@
             // btnBudgetSettings
             // 
             this.btnBudgetSettings.AutoSize = true;
-            this.btnBudgetSettings.Location = new System.Drawing.Point(281, 260);
-            this.btnBudgetSettings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBudgetSettings.Location = new System.Drawing.Point(15, 58);
+            this.btnBudgetSettings.Margin = new System.Windows.Forms.Padding(2);
             this.btnBudgetSettings.Name = "btnBudgetSettings";
-            this.btnBudgetSettings.Size = new System.Drawing.Size(92, 23);
+            this.btnBudgetSettings.Size = new System.Drawing.Size(269, 23);
             this.btnBudgetSettings.TabIndex = 1;
             this.btnBudgetSettings.Text = "Budget Settings";
             this.btnBudgetSettings.UseVisualStyleBackColor = true;
@@ -68,8 +76,8 @@
             // btnDashboard
             // 
             this.btnDashboard.AutoSize = true;
-            this.btnDashboard.Location = new System.Drawing.Point(281, 306);
-            this.btnDashboard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDashboard.Location = new System.Drawing.Point(542, 75);
+            this.btnDashboard.Margin = new System.Windows.Forms.Padding(2);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(95, 23);
             this.btnDashboard.TabIndex = 2;
@@ -107,27 +115,20 @@
             this.pnlHeader.Controls.Add(this.label2);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeader.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlHeader.Margin = new System.Windows.Forms.Padding(2);
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(662, 81);
             this.pnlHeader.TabIndex = 5;
             // 
-            // panel2
+            // label3
             // 
-            this.panel2.Location = new System.Drawing.Point(11, 85);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(150, 81);
-            this.panel2.TabIndex = 6;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // panel3
-            // 
-            this.panel3.Location = new System.Drawing.Point(11, 189);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(150, 81);
-            this.panel3.TabIndex = 7;
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label3.Location = new System.Drawing.Point(561, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(89, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Personal Finance";
             // 
             // label2
             // 
@@ -141,15 +142,73 @@
             this.label2.Text = "Budget Tracker";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label3
+            // panel2
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label3.Location = new System.Drawing.Point(561, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Personal Finance";
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.btnAddTransaction);
+            this.panel2.Location = new System.Drawing.Point(11, 234);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(325, 81);
+            this.panel2.TabIndex = 6;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.btnBudgetSettings);
+            this.panel3.Location = new System.Drawing.Point(353, 234);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(298, 81);
+            this.panel3.TabIndex = 7;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnDashboard);
+            this.panel1.Location = new System.Drawing.Point(11, 337);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(639, 100);
+            this.panel1.TabIndex = 8;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(21, 4);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(85, 13);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Add Transaction";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 4);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(82, 13);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Budget Settings";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(21, 41);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(198, 13);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Record your daily income and expenses.";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 41);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(210, 13);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Set limits and manage your spending goals.";
             // 
             // MainForm
             // 
@@ -157,22 +216,26 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(662, 449);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnlHeader);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblWelcome);
-            this.Controls.Add(this.btnDashboard);
-            this.Controls.Add(this.btnBudgetSettings);
-            this.Controls.Add(this.btnAddTransaction);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Monthly Budget Tracker";
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -190,5 +253,10 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel1;
     }
 }
