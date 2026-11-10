@@ -77,6 +77,9 @@
     <Compile Include="Services\Kamden\BudgetCalculator.cs" />
     <Compile Include="Services\Kwame\DataStorage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Abyun\BudgetSettingsForm.resx">
+      <DependentUpon>BudgetSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Brandon\TransactionForm.resx">
       <DependentUpon>TransactionForm.cs</DependentUpon>
     </EmbeddedResource>

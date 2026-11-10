@@ -1,66 +1,65 @@
 
 using System;
 
-class MonthlyBudget
+namespace BudgetTracker
 {
-    // Variables to store budget information
-    private int month;
-    private int year;
-    private string category;
-    private double spendingLimit;
-
-    // Set starting values
-    public MonthlyBudget()
+    class MonthlyBudget
     {
-        month = 1;
-        year = 2026;
-        category = "Food";
-        spendingLimit = 0;
-    }
+        // Variables to store budget information
+        private int month;
+        private int year;
+        private string category;
+        private double spendingLimit;
 
-    // Let the user enter budget information
-    public void SetBudget()
-    {
-        Console.WriteLine("\n--- Set Monthly Budget ---");
+        // Set starting values
+        public MonthlyBudget()
+        {
+            month = 1;
+            year = 2026;
+            category = "Food";
+            spendingLimit = 0;
+        }
 
-        Console.Write("Enter month (1-12): ");
-        month = Convert.ToInt32(Console.ReadLine());
+        // Receive information from the Windows Form
+        public MonthlyBudget(int month, int year, string category, double spendingLimit)
+        {
+            this.month = month;
+            this.year = year;
+            this.category = category;
+            this.spendingLimit = spendingLimit;
+        }
 
-        Console.Write("Enter year: ");
-        year = Convert.ToInt32(Console.ReadLine());
+        // Allow the form to access budget information
+        public int Month
+        {
+            get { return month; }
+        }
 
-        Console.Write("Enter expense category (Food, Rent, Gas, Entertainment, Other): ");
-        category = Console.ReadLine();
+        public int Year
+        {
+            get { return year; }
+        }
 
-        Console.Write("Enter spending limit: $");
-        spendingLimit = Convert.ToDouble(Console.ReadLine());
+        public string Category
+        {
+            get { return category; }
+        }
 
-        Console.WriteLine("\nBudget saved successfully!");
-    }
+        public double SpendingLimit
+        {
+            get { return spendingLimit; }
+        }
 
-    // Display budget information
-    public void DisplayBudget()
-    {
-        Console.WriteLine("\n--- Monthly Budget Information ---");
+        // Update the spending limit
+        public void UpdateSpendingLimit(double newAmount)
+        {
+            spendingLimit = newAmount;
+        }
 
-        Console.WriteLine("Month: " + month);
-        Console.WriteLine("Year: " + year);
-        Console.WriteLine("Category: " + category);
-        Console.WriteLine("Spending Limit: $" + spendingLimit);
-    }
-
-    // Update the spending limit
-    public void UpdateSpendingLimit()
-    {
-        Console.Write("\nEnter new spending limit: $");
-        spendingLimit = Convert.ToDouble(Console.ReadLine());
-
-        Console.WriteLine("Spending limit updated successfully!");
-    }
-
-    // Calculate the remaining budget
-    public double CalculateRemainingBudget(double amountSpent)
-    {
-        return spendingLimit - amountSpent;
+        // Calculate the remaining budget
+        public double CalculateRemainingBudget(double amountSpent)
+        {
+            return spendingLimit - amountSpent;
+        }
     }
 }
