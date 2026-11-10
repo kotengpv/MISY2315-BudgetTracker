@@ -53,7 +53,9 @@
     <Compile Include="Forms\Kwame\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Brandon\TransactionForm.cs" />
+    <Compile Include="Forms\Brandon\TransactionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\Brandon\TransactionForm.Designer.cs">
       <DependentUpon>TransactionForm.cs</DependentUpon>
     </Compile>
@@ -75,6 +77,9 @@
     <Compile Include="Services\Kamden\BudgetCalculator.cs" />
     <Compile Include="Services\Kwame\DataStorage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Brandon\TransactionForm.resx">
+      <DependentUpon>TransactionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Kwame\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
