@@ -78,7 +78,7 @@
             // btnDashboard
             // 
             this.btnDashboard.AutoSize = true;
-            this.btnDashboard.Location = new System.Drawing.Point(678, 89);
+            this.btnDashboard.Location = new System.Drawing.Point(18, 75);
             this.btnDashboard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(156, 32);
@@ -117,7 +117,7 @@
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(883, 100);
+            this.pnlHeader.Size = new System.Drawing.Size(883, 84);
             this.pnlHeader.TabIndex = 5;
             // 
             // label3
@@ -136,7 +136,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label2.Location = new System.Drawing.Point(25, 27);
+            this.label2.Location = new System.Drawing.Point(29, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(306, 46);
             this.label2.TabIndex = 0;
@@ -232,7 +232,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(24, 18);
+            this.label8.Location = new System.Drawing.Point(19, 19);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(107, 16);
