@@ -18,7 +18,7 @@ namespace BudgetTracker
         }
         // Button configuration to other forms
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAddTransaction_Click(object sender, EventArgs e)
         {
             TransactionForm window = new TransactionForm();
             window.Show();

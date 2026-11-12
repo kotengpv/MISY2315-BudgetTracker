@@ -54,19 +54,19 @@
             // btnAddTransaction
             // 
             this.btnAddTransaction.AutoSize = true;
-            this.btnAddTransaction.Location = new System.Drawing.Point(28, 69);
+            this.btnAddTransaction.Location = new System.Drawing.Point(22, 66);
             this.btnAddTransaction.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddTransaction.Name = "btnAddTransaction";
             this.btnAddTransaction.Size = new System.Drawing.Size(383, 32);
             this.btnAddTransaction.TabIndex = 0;
             this.btnAddTransaction.Text = "Add Transaction";
             this.btnAddTransaction.UseVisualStyleBackColor = true;
-            this.btnAddTransaction.Click += new System.EventHandler(this.button1_Click);
+            this.btnAddTransaction.Click += new System.EventHandler(this.btnAddTransaction_Click);
             // 
             // btnBudgetSettings
             // 
             this.btnBudgetSettings.AutoSize = true;
-            this.btnBudgetSettings.Location = new System.Drawing.Point(20, 71);
+            this.btnBudgetSettings.Location = new System.Drawing.Point(19, 66);
             this.btnBudgetSettings.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBudgetSettings.Name = "btnBudgetSettings";
             this.btnBudgetSettings.Size = new System.Drawing.Size(359, 32);
@@ -78,7 +78,7 @@
             // btnDashboard
             // 
             this.btnDashboard.AutoSize = true;
-            this.btnDashboard.Location = new System.Drawing.Point(723, 92);
+            this.btnDashboard.Location = new System.Drawing.Point(678, 89);
             this.btnDashboard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(156, 32);
@@ -91,7 +91,7 @@
             // 
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.Location = new System.Drawing.Point(245, 138);
+            this.lblWelcome.Location = new System.Drawing.Point(265, 132);
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.Size = new System.Drawing.Size(407, 41);
             this.lblWelcome.TabIndex = 3;
@@ -102,7 +102,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(248, 197);
+            this.label1.Location = new System.Drawing.Point(252, 195);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(420, 23);
             this.label1.TabIndex = 4;
@@ -134,10 +134,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label2.Location = new System.Drawing.Point(39, 41);
+            this.label2.Location = new System.Drawing.Point(25, 27);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 16);
+            this.label2.Size = new System.Drawing.Size(306, 46);
             this.label2.TabIndex = 0;
             this.label2.Text = "Budget Tracker";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -157,7 +158,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(28, 50);
+            this.label6.Location = new System.Drawing.Point(19, 32);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(251, 16);
@@ -168,7 +169,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(28, 5);
+            this.label4.Location = new System.Drawing.Point(19, 5);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(106, 16);
@@ -177,6 +178,7 @@
             // 
             // panel3
             // 
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.btnBudgetSettings);
@@ -189,7 +191,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(16, 50);
+            this.label7.Location = new System.Drawing.Point(16, 32);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(267, 16);
@@ -212,7 +214,7 @@
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.btnDashboard);
             this.panel1.Location = new System.Drawing.Point(15, 415);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(852, 123);
             this.panel1.TabIndex = 8;
@@ -220,7 +222,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(19, 60);
+            this.label9.Location = new System.Drawing.Point(19, 47);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(297, 16);
@@ -230,7 +232,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(19, 18);
+            this.label8.Location = new System.Drawing.Point(24, 18);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(107, 16);
