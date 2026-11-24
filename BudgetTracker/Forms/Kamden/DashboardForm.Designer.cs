@@ -2,38 +2,24 @@
 {
     partial class DashboardForm
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
-
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
-
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
-        private void InitializeComponent()
-        {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "DashboardForm";
-        }
-
-        #endregion
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Label lblMonth;
+        private System.Windows.Forms.ComboBox cmbMonth;
+        private System.Windows.Forms.Label lblYear;
+        private System.Windows.Forms.Label lblIncome;
+        private System.Windows.Forms.Label lblExpenses;
+        private System.Windows.Forms.Label lblRemaining;
+        private System.Windows.Forms.Label lblBudget;
+        private System.Windows.Forms.Label lblBudgetUsed;
+        private System.Windows.Forms.Label lblWarning;
+        private System.Windows.Forms.Label lblHistory;
+        private System.Windows.Forms.ComboBox cmbYear;
+        private System.Windows.Forms.GroupBox grpIncome;
+        private System.Windows.Forms.GroupBox grpExpenses;
+        private System.Windows.Forms.GroupBox grpRemaining;
+        private System.Windows.Forms.ProgressBar prgBudget;
+        private System.Windows.Forms.DataGridView dgvTransactions;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnClose;
     }
 }
