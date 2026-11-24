@@ -36,7 +36,7 @@ namespace BudgetTracker
 
             SetupScreen();
             LoadData();
-            RefreshDashboard();
+            RefreshDashbard();
         }
 
     // Builds the screen: setes the size, position, and look of each control
