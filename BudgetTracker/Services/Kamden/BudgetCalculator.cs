@@ -119,6 +119,32 @@ namespace BudgetTracker
         return results;
     }
 
-    public
-            
+    public List<string> GetWarnings(int month, int year)
+    {
+        List<string> warnings = new List<string>();
+
+        double remaining = GetRemaining(month, year);
+        if (remaining < 0)
+        {
+            double overspent = remaining * -1;
+            warnings.Add("You spent " + overspent.ToString("C") + " more than you earned this month.");
+        }
+
+        List<CategoryStatus> statuses = CheckBudgetLimits(month, year);
+        foreach (CategroyStatus s in statuses)
+        {
+            if (s.Status == "Over Budget")
+            {
+                double overBy = s.Spent - s.Limit;
+                warnings.Add(s.Category + "is over budget by " + overBy.ToString("C") + ".");
+            }
+            else if (s.Status == "Near Limit")
+            {
+                warnings.Add(s.Category + " has used " + s.PercentUsed + "% of tis budget.");
+            }
+        }
+
+        return warnings;
+    }
+          
 }
