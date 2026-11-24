@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -8,6 +8,12 @@ namespace BudgetTracker
 {
     public partial class DashboardForm : Form
     {
+        public DashboardForm()
+        {
+            InitializeComponent();
+
+         
+        }
         private void InitializeComponent()
         {
             this.lblTitle = new System.Windows.Forms.Label();
@@ -41,7 +47,7 @@ namespace BudgetTracker
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.Location = new System.Drawing.Point(12, 9);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(463, 46);
+            this.lblTitle.Size = new System.Drawing.Size(450, 45);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Monthly Budget Dashboard";
             this.lblTitle.Click += new System.EventHandler(this.label1_Click);
@@ -54,6 +60,7 @@ namespace BudgetTracker
             this.lblMonth.Size = new System.Drawing.Size(46, 16);
             this.lblMonth.TabIndex = 1;
             this.lblMonth.Text = "Month:";
+            this.lblMonth.Click += new System.EventHandler(this.lblMonth_Click);
             // 
             // cmbMonth
             // 
@@ -63,6 +70,7 @@ namespace BudgetTracker
             this.cmbMonth.Name = "cmbMonth";
             this.cmbMonth.Size = new System.Drawing.Size(121, 24);
             this.cmbMonth.TabIndex = 2;
+            this.cmbMonth.SelectedIndexChanged += new System.EventHandler(this.cmbMonth_SelectedIndexChanged);
             // 
             // lblYear
             // 
@@ -72,6 +80,7 @@ namespace BudgetTracker
             this.lblYear.Size = new System.Drawing.Size(39, 16);
             this.lblYear.TabIndex = 3;
             this.lblYear.Text = "Year:";
+            this.lblYear.Click += new System.EventHandler(this.lblYear_Click);
             // 
             // lblIncome
             // 
@@ -111,6 +120,7 @@ namespace BudgetTracker
             this.lblBudget.Size = new System.Drawing.Size(136, 16);
             this.lblBudget.TabIndex = 7;
             this.lblBudget.Text = "Monthly Budget: $0.00";
+            this.lblBudget.Click += new System.EventHandler(this.lblBudget_Click);
             // 
             // lblBudgetUsed
             // 
@@ -120,6 +130,7 @@ namespace BudgetTracker
             this.lblBudgetUsed.Size = new System.Drawing.Size(111, 16);
             this.lblBudgetUsed.TabIndex = 8;
             this.lblBudgetUsed.Text = "Budget Used: 0%";
+            this.lblBudgetUsed.Click += new System.EventHandler(this.lblBudgetUsed_Click);
             // 
             // lblWarning
             // 
@@ -131,6 +142,7 @@ namespace BudgetTracker
             this.lblWarning.TabIndex = 9;
             this.lblWarning.Text = "Budget warning";
             this.lblWarning.Visible = false;
+            this.lblWarning.Click += new System.EventHandler(this.lblWarning_Click);
             // 
             // lblHistory
             // 
@@ -140,6 +152,7 @@ namespace BudgetTracker
             this.lblHistory.Size = new System.Drawing.Size(123, 16);
             this.lblHistory.TabIndex = 10;
             this.lblHistory.Text = "Transaction History";
+            this.lblHistory.Click += new System.EventHandler(this.lblHistory_Click);
             // 
             // cmbYear
             // 
@@ -149,6 +162,7 @@ namespace BudgetTracker
             this.cmbYear.Name = "cmbYear";
             this.cmbYear.Size = new System.Drawing.Size(121, 24);
             this.cmbYear.TabIndex = 11;
+            this.cmbYear.SelectedIndexChanged += new System.EventHandler(this.cmbYear_SelectedIndexChanged);
             // 
             // grpIncome
             // 
@@ -159,6 +173,7 @@ namespace BudgetTracker
             this.grpIncome.TabIndex = 12;
             this.grpIncome.TabStop = false;
             this.grpIncome.Text = "Total Income";
+            this.grpIncome.Enter += new System.EventHandler(this.grpIncome_Enter);
             // 
             // grpExpenses
             // 
@@ -169,6 +184,7 @@ namespace BudgetTracker
             this.grpExpenses.TabIndex = 13;
             this.grpExpenses.TabStop = false;
             this.grpExpenses.Text = "Total Expenses";
+            this.grpExpenses.Enter += new System.EventHandler(this.grpExpenses_Enter);
             // 
             // grpRemaining
             // 
@@ -179,6 +195,7 @@ namespace BudgetTracker
             this.grpRemaining.TabIndex = 14;
             this.grpRemaining.TabStop = false;
             this.grpRemaining.Text = "Remaining Balance";
+            this.grpRemaining.Enter += new System.EventHandler(this.grpRemaining_Enter);
             // 
             // prgBudget
             // 
@@ -186,6 +203,7 @@ namespace BudgetTracker
             this.prgBudget.Name = "prgBudget";
             this.prgBudget.Size = new System.Drawing.Size(725, 23);
             this.prgBudget.TabIndex = 15;
+            this.prgBudget.Click += new System.EventHandler(this.prgBudget_Click);
             // 
             // dgvTransactions
             // 
@@ -201,6 +219,7 @@ namespace BudgetTracker
             this.dgvTransactions.RowTemplate.Height = 24;
             this.dgvTransactions.Size = new System.Drawing.Size(240, 150);
             this.dgvTransactions.TabIndex = 16;
+            this.dgvTransactions.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTransactions_CellContentClick);
             // 
             // btnRefresh
             // 
@@ -210,6 +229,7 @@ namespace BudgetTracker
             this.btnRefresh.TabIndex = 17;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnClose
             // 
@@ -219,6 +239,7 @@ namespace BudgetTracker
             this.btnClose.TabIndex = 18;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // DashboardForm
             // 
@@ -261,6 +282,81 @@ namespace BudgetTracker
         }
 
         private void DashboardForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbMonth_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblYear_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblMonth_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grpIncome_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grpExpenses_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grpRemaining_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblBudget_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void prgBudget_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblBudgetUsed_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblWarning_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblHistory_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvTransactions_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
         {
 
         }
