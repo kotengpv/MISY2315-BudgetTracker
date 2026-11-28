@@ -176,3 +176,51 @@ namespace BudgetTracker
                   s.Limit.ToString("C"),
                   s.Spent.ToString("C"),
                   s.Left.ToString("C"),
+                  s.PercentUsed + "%",
+                  s.Status);
+
+               DataGridViewCell statusCell = dgvBudgets.Rows[rowIndex].Cells["Status"];
+               if (s.Status == "Over Budget")
+               {
+                  statusCell.Style.ForeColor = Color.Red;
+               }
+               else if (s.Status == "Near Limit")
+               {
+                  statusCell.Style.ForeColor = Color.DarkOrange;
+               }
+               else
+               {
+                  statusCell.Style.ForeColor = Color.Green;
+               }
+            }
+
+            lstWarnings.Items.Clear();
+
+            List<string> warnings = calculator.GetWarnings(month, year);
+            if (warnings.Count == 0)
+            {
+               lstWarnings.Items.Add("No alrets. Everything is within budget.");
+            }
+            else
+            {
+               foreach (string w in warnings)
+               {
+                  lstWarnings.Items.Add(w);
+               }
+            }
+         }
+
+
+
+         private void dtpMonth_ValueChanged(object sender, EventArgs e)
+         {
+            ShowSummary();
+         }
+
+         private void btnRefresh_Click(object sender, EventArgs e)
+         {
+            ShowSummary();
+         }
+      }
+   }
+   
